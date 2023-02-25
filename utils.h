@@ -18,10 +18,10 @@ typedef struct Array {
 }Array;
 
 // Local APIs
-Array* getRandomArray(size_t,int,int);
-Array* getSpecifiedArray(int,...);
-Array* getEmptyArray(size_t);
-void emptyArray(Array*);
+Array getRandomArray(size_t,int,int);
+Array getSpecifiedArray(size_t,...);
+Array getEmptyArray(size_t);
+void clearArray(Array);
 
 
 

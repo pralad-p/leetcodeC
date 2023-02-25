@@ -49,13 +49,6 @@ cmake_ninja_workdir = D$:\CLionMainProjects\leetcodeC\cmake-build-debug\
 
 build cmake_object_order_depends_target_leetcodeC: phony || CMakeFiles\leetcodeC.dir
 
-build CMakeFiles\leetcodeC.dir\main.c.obj: C_COMPILER__leetcodeC_Debug D$:\CLionMainProjects\leetcodeC\main.c || cmake_object_order_depends_target_leetcodeC
-  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -std:c17
-  OBJECT_DIR = CMakeFiles\leetcodeC.dir
-  OBJECT_FILE_DIR = CMakeFiles\leetcodeC.dir
-  TARGET_COMPILE_PDB = CMakeFiles\leetcodeC.dir\
-  TARGET_PDB = leetcodeC.pdb
-
 build CMakeFiles\leetcodeC.dir\runner.c.obj: C_COMPILER__leetcodeC_Debug D$:\CLionMainProjects\leetcodeC\runner.c || cmake_object_order_depends_target_leetcodeC
   FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -std:c17
   OBJECT_DIR = CMakeFiles\leetcodeC.dir
@@ -70,6 +63,13 @@ build CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj: C_COMPILER__leetcodeC_Debug D$:\
   TARGET_COMPILE_PDB = CMakeFiles\leetcodeC.dir\
   TARGET_PDB = leetcodeC.pdb
 
+build CMakeFiles\leetcodeC.dir\utils.c.obj: C_COMPILER__leetcodeC_Debug D$:\CLionMainProjects\leetcodeC\utils.c || cmake_object_order_depends_target_leetcodeC
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -std:c17
+  OBJECT_DIR = CMakeFiles\leetcodeC.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcodeC.dir
+  TARGET_COMPILE_PDB = CMakeFiles\leetcodeC.dir\
+  TARGET_PDB = leetcodeC.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target leetcodeC
@@ -78,7 +78,7 @@ build CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj: C_COMPILER__leetcodeC_Debug D$:\
 #############################################
 # Link the executable leetcodeC.exe
 
-build leetcodeC.exe: C_EXECUTABLE_LINKER__leetcodeC_Debug CMakeFiles\leetcodeC.dir\main.c.obj CMakeFiles\leetcodeC.dir\runner.c.obj CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj
+build leetcodeC.exe: C_EXECUTABLE_LINKER__leetcodeC_Debug CMakeFiles\leetcodeC.dir\runner.c.obj CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj CMakeFiles\leetcodeC.dir\utils.c.obj
   FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

@@ -5,13 +5,12 @@
 #include <stdio.h>
 #include "utils.h"
 #include "01-TwoSum.h"
+#include "02-Palindrome.h"
 
 #define AR_SIZE 4
-#define LOWER_LIMIT 1
-#define UPPER_LIMIT 1000
 
-int main() {
-//    Array* c = getRandomArray(AR_SIZE,LOWER_LIMIT,UPPER_LIMIT); // get random array
+void arrayBasedFramework() {
+    //    Array* c = getRandomArray(AR_SIZE,LOWER_LIMIT,UPPER_LIMIT); // get random array
     Array c = getSpecifiedArray(AR_SIZE,2,7,11,15);
     int target = 9;
     // Before effects
@@ -37,5 +36,12 @@ int main() {
 
     clearArray(c);
     free(returnSize);
+}
+
+
+int main() {
+    int possible_value = 2222222;
+    printf("%d has truth value: %s",possible_value,isPalindrome(possible_value) ? "true" : "false");
+
     return 0;
 }

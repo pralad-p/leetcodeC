@@ -77,6 +77,13 @@ build CMakeFiles\leetcodeC.dir\02-Palindrome.c.obj: C_COMPILER__leetcodeC_Debug 
   TARGET_COMPILE_PDB = CMakeFiles\leetcodeC.dir\
   TARGET_PDB = leetcodeC.pdb
 
+build CMakeFiles\leetcodeC.dir\03-RomanToInt.c.obj: C_COMPILER__leetcodeC_Debug D$:\CLionMainProjects\leetcodeC\03-RomanToInt.c || cmake_object_order_depends_target_leetcodeC
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -std:c17
+  OBJECT_DIR = CMakeFiles\leetcodeC.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcodeC.dir
+  TARGET_COMPILE_PDB = CMakeFiles\leetcodeC.dir\
+  TARGET_PDB = leetcodeC.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target leetcodeC
@@ -85,7 +92,7 @@ build CMakeFiles\leetcodeC.dir\02-Palindrome.c.obj: C_COMPILER__leetcodeC_Debug 
 #############################################
 # Link the executable leetcodeC.exe
 
-build leetcodeC.exe: C_EXECUTABLE_LINKER__leetcodeC_Debug CMakeFiles\leetcodeC.dir\runner.c.obj CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj CMakeFiles\leetcodeC.dir\utils.c.obj CMakeFiles\leetcodeC.dir\02-Palindrome.c.obj
+build leetcodeC.exe: C_EXECUTABLE_LINKER__leetcodeC_Debug CMakeFiles\leetcodeC.dir\runner.c.obj CMakeFiles\leetcodeC.dir\01-TwoSum.c.obj CMakeFiles\leetcodeC.dir\utils.c.obj CMakeFiles\leetcodeC.dir\02-Palindrome.c.obj CMakeFiles\leetcodeC.dir\03-RomanToInt.c.obj
   FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

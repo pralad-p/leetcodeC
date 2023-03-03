@@ -3,11 +3,47 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 #include "utils.h"
 #include "01-TwoSum.h"
 #include "02-Palindrome.h"
+#include "03-RomanToInt.h"
 
 #define AR_SIZE 4
+
+char * longestCommonPrefix(char ** strs, int strsSize){
+    int index = 0, j = 1;
+    char* res = (char*)calloc(200,sizeof(char));
+    while (strs[j][index] != '\0' || strs[0][index] != '\0') {
+        while (j < strsSize) {
+            if (strs[j][index] != strs[0][index]) {
+                for (int i =0; i < index; i++) {
+                    res[i] = strs[0][i];
+                }
+                return res;
+            }
+            ++j;
+        }
+        ++index;
+        j = 1;
+    }
+    return res;
+}
+
+bool isValid(char * s){
+    if (strlen(s) == 0 || strlen(s) == 1) return false;
+    char *stack = calloc(1000,sizeof(char));
+    int top = -1;
+    for (int i = 0; i<strlen(s); i++) {
+        if (s[i] == '(' || s[i] == '{' || s[i] == '[' ) {stack[++top] = s[i];}
+        else if (s[i] == ')' && stack[top] != '(') return false;
+        else if (s[i] == '}' && stack[top] != '{') return false;
+        else if (s[i] == ']' && stack[top] != '[') return false;
+        else {top--;}
+    }
+    free(stack);
+    return true;
+}
 
 void arrayBasedFramework() {
     //    Array* c = getRandomArray(AR_SIZE,LOWER_LIMIT,UPPER_LIMIT); // get random array
@@ -40,8 +76,6 @@ void arrayBasedFramework() {
 
 
 int main() {
-    int possible_value = 2222222;
-    printf("%d has truth value: %s",possible_value,isPalindrome(possible_value) ? "true" : "false");
-
+    printf("%s",isValid("()"));
     return 0;
 }

@@ -74,8 +74,23 @@ void arrayBasedFramework() {
     free(returnSize);
 }
 
+char findTheDifference(char * s, char * t){
+    int* bookKeep = calloc(26,sizeof(int));
+    for (size_t i=0;i < strlen(t); i ++ ) {
+        bookKeep[t[i]-97]++;
+    }
+    for (size_t i=0;i < strlen(s); i ++ ) {
+        bookKeep[s[i]-97]--;
+    }
+    for (size_t i=0; i < 26; i ++ ) {
+        if (bookKeep[i] == 1) {
+            return (char)(97+i);
+        }
+    }
+}
+
 
 int main() {
-    printf("%s",isValid("()"));
+    printf("%c",findTheDifference("abcd","abcde"));
     return 0;
 }

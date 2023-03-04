@@ -36,3 +36,6 @@
 11. Remove Duplicates From Sorted Array
 
 12. Remove element
+
+13. Search Insert Position
+14. Length of last word

@@ -32,3 +32,7 @@
 9. Reverse String
 
 10. Find the Difference
+
+11. Remove Duplicates From Sorted Array
+
+12. Remove element

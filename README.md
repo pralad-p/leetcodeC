@@ -39,3 +39,6 @@
 
 13. Search Insert Position
 14. Length of last word
+15. Climbing Stairs
+16. Single Number
+    - XOR is a very powerful bit manipulation technique to check if same or different numbers exist in a list. 
